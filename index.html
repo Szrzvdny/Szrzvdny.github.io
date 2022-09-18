@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <title>羊羊刷次数~</title>
+    <link href="static/css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="static/css/style2.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="static/css/mdui.min.css">
+  </head>
+  <body>
+<div class="container">
+      <div class="box col-12">
+          <div class="text-center alert alert-success mb-3" role="alert" id="">
+        打开羊羊小程序，<b>点击右上角设置</b>，把 <b>UID</b> 记下来，在下面方输入自己的 <b>UID</b> ， <b>点击获取</b>，开始装逼，获取 token 速度由羊羊服务器决定，慢的话多获取几遍。 </div>
+        <div class="text-center alert alert-success mb-3" role="alert" id="content">
+          请输入你的 token 让平台帮你进行刷关卡吧 <br><b>最下方有获取教程</b>
+        </div>
+		<div class="form-inline uid mb-3 clearfix">
+			<div class="form-floating col-8">
+			  <input class="form-control" id="uidu" rows="1" placeholder="输入ID获取token" oninput="value=value.replace(/[^\d]/g,'')">
+			  <label for="token">输入 UID 获取 token </label>
+			</div>
+			<button class="btn btn-secondary col-4" id="getToken">点击获取</button>
+		</div>
+        <div class="form-floating mb-3">
+          <input class="form-control" id="token" rows="2" placeholder="自动获取 token 或手动输入 token">
+          <label for="token">自动获取 token 或手动输入 token</label>
+        </div>
+        <div class="form-inline mb-3 text-center">
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="get_type" value="1" checked="">
+			  <label class="form-check-label" for="inlineRadio1">刷羊群</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="get_type" value="2">
+			  <label class="form-check-label" for="inlineRadio2">刷话题</label>
+			</div>
+		</div>
+        <button class="btn btn-success col-12 mb-4" id="getUser">提交</button>
+		<button class="btn btn-success col-12 mb-4" id="getUserMoremore">提交99次</button>
+		<button class="btn btn-success col-12 mb-4" id="getUserNight">提交999次</button>
+		<button class="btn btn-success col-12 mb-4" id="getFor">无限循环</button>        
+		<div id="log" class="text-center alert-success mb-3" style="overflow: auto;width: 100%;height: 120px;"></div> 
+<div class="text-center alert alert-success mb-3" role="alert" id="">
+            此网站仅供娱乐 纯属分享<br>by：墨墨呀 v: Sinyer_Ana
+        </div>	
+  <div style="text-align: center;margin:0 auto">
+            <img src="static/picture/uid.png" style="width:100%;">
+        </div>
+               <div class="mb-3">
+          <div class="text-center" id="jiaocheng">
+            
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="static/js/token.js"></script>
+    <script src="static/js/mdui.min.js"></script>
+    <script src="static/js/main_ihde60bu3a.js"></script>
+     <script src="static/js/more.js"></script>
+     <script src="static/js/moree.js"></script>
+     <script src="static/js/moreee.js"></script>
+     <script src="static/js/for.js"></script>
+<script type="text/javascript">
+            function is_weixin() {
+                var ua = navigator.userAgent.toLowerCase();
+                if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                    return true
+                } else {
+                    return false
+                }
+            }
+            var isWeixin = is_weixin();
+            var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+            function loadHtml() {
+                var div = document.createElement('div');
+                div.id = 'weixin-tip';
+                div.innerHTML = '<p><img src="https://mapp.alicdn.com/16306714822555obrw02Y9RzuSry.png" alt="微信打开"/></p>';
+                document.body.appendChild(div)
+            }
+            function loadStyleText(cssText) {
+                var style = document.createElement('style');
+                style.rel = 'stylesheet';
+                style.type = 'text/css';
+                try {
+                    style.appendChild(document.createTextNode(cssText))
+                } catch (e) {
+                    style.styleSheet.cssText = cssText
+                }
+                var head = document.getElementsByTagName("head")[0];
+                head.appendChild(style)
+            }
+            var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
+            if (isWeixin) {
+                loadHtml();
+                loadStyleText(cssText)
+            }
+        </script>
+
+</body>
+</html>
